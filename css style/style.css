@@ -1,0 +1,73 @@
+:root {
+    --alabaster: rgb(255, 255, 255);
+}
+
+* {
+    font-family: 'Brandon Grotesque','brandon-grotesque', Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../images/mainsec1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+/**/
+.navbar > div{
+    border: 1px solid black;
+}
+/**/
+/* Navbar (Sticky) */
+.navbar {
+    border: 1px solid red;
+    height: 17.5vh;
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+}
+.logo {
+    color: var(--alabaster);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+}
+.links > a {
+    color: var(--alabaster);
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: .8s;
+}
+.links > a:hover {
+    border-bottom: 1px solid var(--alabaster); 
+}
+.secondMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20%;
+}
+.secondMenu > a{
+    color: var(--alabaster);
+    text-decoration: none;
+}
+.shop:hover {
+    border-bottom: 1px solid var(--alabaster);
+}
+.secondMenu i {
+    font-size: 20px;
+}
+
+
+
+/* Main-Section 1 */
+.mainsec1 {
+    height: 82.5vh;
+    color: white;
+}
