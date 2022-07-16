@@ -9,16 +9,15 @@
     padding: 0;
 }
 
-body {
+.navbar + .section-1 {
     background-image: url('../images/mainsec1.jpg');
     background-position: center;
     background-size: cover;
 }
 
 /* Navbar (Sticky) */
-.navbar {
-    border: 1px solid red;
-    height: 10vh;
+.navbar {   
+    height: 15vh;
     display: grid;
     grid-template-columns: 2fr 8fr 2fr;
 }
@@ -70,37 +69,41 @@ body {
     width: 100%;
 }
 
-/* Main-Section 1 */
+
+/* Section 1 */
 .section-1 {
     height: 100vh;
     color: white;
     display: flex;
     flex-direction: column;
     display: block;
-    border: 1px solid red;
+    border: 1px solid rgb(70, 218, 255);
 }
 
-.sec1-wrapper {
+/* Section 1 and Section 2 Wrappers*/
+.sec1-wrapper, .sec2-wrapper {
     height: 22.5vh;
     width: 30vw;
     margin-left: 3.75%;
-    margin-top: 32.5%;
+    margin-top: 27.5%;
 
     display: grid;
     grid-template-rows: 1fr 5fr 3fr;
 }
-.sec1-wrapper > h3 {
+.sec1-wrapper > h3, .sec2-wrapper > h3 {
     font-size: 18px;
     font-weight: 100;
     letter-spacing: 0.1px;
 }
-.sec1-wrapper > h1 {
+.sec1-wrapper > h1, .sec2-wrapper > h1 {
     display: flex;
     align-items: center;
     font-size: 40px;
     letter-spacing: 1px;
 }
-.sec1-wrapper-btn {
+
+/* Section1 and Section2 button Styles */
+.sec1-wrapper-btn, .sec2-wrapper-btn {
     font-size: 15px;
     font-weight: bold;
     color: var(--alabaster);
@@ -116,8 +119,23 @@ body {
     background-size: 100% 200%;
     transition: background .3s;
 }
-.sec1-wrapper-btn:hover {
+.sec1-wrapper-btn:hover, .sec2-wrapper-btn:hover {
     background-position: 100% 100%;
     color: var(--main-black);
     font-weight: bold;
 }
+
+
+/* Section 2 */
+.section-2 {
+    height: 100vh;
+    background-image: url(../images/mainsec2.jpg);
+    background-position: center;
+    background-size: cover;
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    display: flex;   
+}
+
