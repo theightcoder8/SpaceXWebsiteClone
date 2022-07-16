@@ -1,5 +1,6 @@
 :root {
     --alabaster: rgb(255, 255, 255);
+    --main-black: rgb(0, 0, 0);
 }
 
 * {
@@ -13,15 +14,11 @@ body {
     background-position: center;
     background-size: cover;
 }
-/**/
-.navbar > div{
-    border: 1px solid black;
-}
-/**/
+
 /* Navbar (Sticky) */
 .navbar {
     border: 1px solid red;
-    height: 17.5vh;
+    height: 10vh;
     display: grid;
     grid-template-columns: 2fr 8fr 2fr;
 }
@@ -37,15 +34,24 @@ body {
     justify-content: center;
     gap: 3%;
 }
-.links > a {
+.link {
     color: var(--alabaster);
     font-size: 12px;
-    font-weight: 800;
+    font-weight: bold;
     text-decoration: none;
-    transition: .8s;
+    display: inline-block;
+    text-decoration: none;
 }
-.links > a:hover {
-    border-bottom: 1px solid var(--alabaster); 
+.link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: var(--alabaster);
+    transition: width .3s;
+}
+.link:hover::after {
+    width: 100%;
 }
 .secondMenu {
     display: flex;
@@ -53,23 +59,65 @@ body {
     justify-content: center;
     gap: 20%;
 }
-.secondMenu > a{
+.fa-solid {
     color: var(--alabaster);
     text-decoration: none;
-    font-size: 12px;
-    font-weight: 800;
+    font-size: 17.5px;
 }
-.shop:hover {
-    border-bottom: 1px solid var(--alabaster);
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
-.secondMenu i {
-    font-size: 20px;
-}
-
-
 
 /* Main-Section 1 */
-.mainsec1 {
-    height: 82.5vh;
+.section-1 {
+    height: 100vh;
     color: white;
+    display: flex;
+    flex-direction: column;
+    display: block;
+    border: 1px solid red;
+}
+
+.sec1-wrapper {
+    height: 22.5vh;
+    width: 30vw;
+    margin-left: 3.75%;
+    margin-top: 32.5%;
+
+    display: grid;
+    grid-template-rows: 1fr 5fr 3fr;
+}
+.sec1-wrapper > h3 {
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 0.1px;
+}
+.sec1-wrapper > h1 {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+.sec1-wrapper-btn {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--alabaster);
+    background-color: transparent;
+    background-repeat:no-repeat;
+    border: 1px solid var(--alabaster);
+
+    width: 12vw;
+    cursor:pointer;
+    overflow: hidden;
+
+    background: linear-gradient(transparent, transparent 50%, rgb(255, 255, 255) 50%, rgb(255, 255, 255));
+    background-size: 100% 200%;
+    transition: background .3s;
+}
+.sec1-wrapper-btn:hover {
+    background-position: 100% 100%;
+    color: var(--main-black);
+    font-weight: bold;
 }
