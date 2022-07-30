@@ -13,14 +13,14 @@ function myFunction() {
   }
 }
 
-/*
+
 const togglea = document.getElementsByClassName('togglea')[0];
 const toggleLinks = document.getElementsByClassName('toggle-bar-links')[0];
 const link = document.querySelector('.link');
 
 togglea.addEventListener('click', ()=> {
-  toggleLinks.classList.toggle('active')
+  toggleLinks.classList.toggle('active');
 
   togglea.style.display = 'none';
 });
-*/
+
