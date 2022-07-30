@@ -68,18 +68,26 @@
     top: 0;
     width: 100%;
 }
-/*
+
 .toggle-bar-links {
     display: none;
 }
 .toggle-bar-links.active {
-    height: 100vh;
-    width: 20vw;
     display: flex;
     flex-direction: column;
     background-color: var(--main-black);
+    border: 1px solid red;
+    height: 100vh;
 }
-*/
+.toggle-bar-links.active li {
+    list-style: none;
+    background-color: var(--main-black);
+}
+.toggle-bar-links.active a {
+    color: var(--alabaster);
+    text-decoration: none;
+}
+
 
 
 /* Section 1 */
