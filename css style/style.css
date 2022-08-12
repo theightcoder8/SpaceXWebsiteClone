@@ -1,161 +1,71 @@
-:root {
-    --alabaster: rgb(255, 255, 255);
-    --main-black: rgb(0, 0, 0);
-}
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;600;700&display=swap');
 
 * {
-    font-family: 'Brandon Grotesque','brandon-grotesque', Helvetica, sans-serif;
+    font-family: 'Familjen Grotesk', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.navbar + .section-1 {
-    background-image: url('../images/mainsec1.jpg');
-    background-position: center;
-    background-size: cover;
+body {
+    background: #000;
+    color: #fff;
 }
 
-/* Navbar (Sticky) */
-.navbar {   
-    height: 15vh;
-    display: grid;
-    grid-template-columns: 2fr 8fr 2fr;
-}
-.logo {
-    color: var(--alabaster);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3%;
-}
-.link {
-    color: var(--alabaster);
-    font-size: 12px;
-    font-weight: bold;
+a {
     text-decoration: none;
-    display: inline-block;
-    text-decoration: none;
+    color: #fff;
 }
-.link::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 1px;
-    background: var(--alabaster);
-    transition: width .3s;
+
+ul {
+    list-style: none;
 }
-.link:hover::after {
-    width: 100%;
-}
-.secondMenu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20%;
-}
-.fa-solid {
-    color: var(--alabaster);
-    text-decoration: none;
-    font-size: 17.5px;
-}
-.sticky {
+
+
+/* MAIN HEADER */
+.main-header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-}
-
-.toggle-bar-links {
-    display: none;
-}
-.toggle-bar-links.active {
+    z-index: 3;
     display: flex;
-    flex-direction: column;
-    background-color: var(--main-black);
-    border: 1px solid red;
-    height: 100vh;
-}
-.toggle-bar-links.active li {
-    list-style: none;
-    background-color: var(--main-black);
-}
-.toggle-bar-links.active a {
-    color: var(--alabaster);
-    text-decoration: none;
-}
-
-
-
-/* Section 1 */
-.section-1 {
-    height: 100vh;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    display: block;
-    border: 1px solid rgb(70, 218, 255);
-}
-
-/* Section 1 and Section 2 Wrappers*/
-.sec1-wrapper, .sec2-wrapper {
-    height: 22.5vh;
-    width: 30vw;
-    margin-left: 3.75%;
-    margin-top: 27.5%;
-
-    display: grid;
-    grid-template-rows: 1fr 5fr 3fr;
-}
-.sec1-wrapper > h3, .sec2-wrapper > h3 {
-    font-size: 18px;
-    font-weight: 100;
-    letter-spacing: 0.1px;
-}
-.sec1-wrapper > h1, .sec2-wrapper > h1 {
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    font-size: 40px;
-    letter-spacing: 1px;
+    text-transform: uppercase;
+    height: 100px;
+    padding: 0 30px;
+
+    border: 1px solid red;
 }
 
-/* Section1 and Section2 button Styles */
-.sec1-wrapper-btn, .sec2-wrapper-btn {
-    font-size: 15px;
-    font-weight: bold;
-    color: var(--alabaster);
-    background-color: transparent;
-    background-repeat:no-repeat;
-    border: 1px solid var(--alabaster);
-
-    width: 12vw;
-    cursor:pointer;
-    overflow: hidden;
-
-    background: linear-gradient(transparent, transparent 50%, rgb(255, 255, 255) 50%, rgb(255, 255, 255));
-    background-size: 100% 200%;
-    transition: background .3s;
-}
-.sec1-wrapper-btn:hover, .sec2-wrapper-btn:hover {
-    background-position: 100% 100%;
-    color: var(--main-black);
-    font-weight: bold;
+.desktop-main-menu {
+    border: 1px solid rebeccapurple;
 }
 
+/* Logo */
+.logo {
+    width: 210px;
+    height: auto;
+}  
 
-/* Section 2 */
-.section-2 {
-    height: 100vh;
-    background-image: url(../images/mainsec2.jpg);
-    background-position: center;
-    background-size: cover;
+.logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
-    color: white;
+/* Desktop Menu */
+.desktop-main-menu {
+    margin-right: 50px;
+}
+  
+.desktop-main-menu ul {
     display: flex;
-    flex-direction: column;
-    display: flex;   
 }
-
+  
+.desktop-main-menu ul li {
+    position: relative;
+    margin-right: 20px;
+    padding-bottom: 2px;
+}
